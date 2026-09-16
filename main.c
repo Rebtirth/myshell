@@ -6,7 +6,13 @@ int main(void) {
     while (1) {
         printf("myshell> ");
         if (fgets(line, sizeof(line), stdin) == NULL) break;
-        printf("你输入了: %s", line);
+         char *token = strtok(line, " \t\n");
+         int i = 0;
+         while (token != NULL) {
+         printf("token[%d] = %s\n", i, token);
+         i++;
+    token = strtok(NULL, " \t\n");
+}
     }
     return 0;
 }

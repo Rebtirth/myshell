@@ -1,1 +1,4 @@
-my shell
+/myshell
+*.o
+__pycache__/
+*.py[cod]
